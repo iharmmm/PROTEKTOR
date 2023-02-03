@@ -1,0 +1,15 @@
+$main_BG_Color: #0C1938;
+$white: #fff;
+$TopBar__responsive-bg: #2c3840;
+$TopBar-responsive-animation-type: fade-in;
+
+
+@mixin orange_btn {
+  content: "";
+  background: #EF382A;
+  border-radius: 16px;
+  padding: 14px 32px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
