@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const CopyPlugin = require('copy-webpack-plugin');
 
 const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
@@ -17,7 +16,11 @@ module.exports = {
     open: true,
     hot: true,
   },
-  entry: path.resolve(__dirname, 'src', 'index.js'),
+  entry: {
+    index: './src/index.js',
+    about: './src/about.js',
+    calculated: './src/calculated.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
@@ -26,14 +29,23 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'index.html'),
+      filename: "index.html",
+      template: './src/index.html',
+      chunks: ['index'],
+      inject: true,
     }),
-    new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+    new HtmlWebpackPlugin({
+      filename: "about.html",
+      template: './src/about.html',
+      chunks: ['index'],
+      inject: true,
     }),
-    // new CopyPlugin({
-    //   patterns: [{ from: 'static', to: './' }],
-    // }),
+    new HtmlWebpackPlugin({
+      filename: "calculated.html",
+      template: './src/calculated.html',
+      chunks: ['index'],
+      inject: true,
+    }),
   ],
   module: {
     rules: [
