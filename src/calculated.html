@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dostaver</title>
+    <title>PROTEKTOR</title>
 </head>
 
 <body>
 <div class="wrapper">
     <header>
-        <a href="index.html">
+        <a href="index.html" class="header__logo">
             <img src="img/logo.svg" alt="Logo" width="182" height="66">
         </a>
         <nav>
@@ -31,7 +31,68 @@
             <a class="nav__phone-link" href="tel:+7 (495) - 000 - 0000">+7 (495) - 000 - 0000</a>
         </div>
     </header>
+    <section>
+        <form class="form__calc">
+            <h1>Калькулятор</h1>
+            <div class="form__inputs">
+                <div class="form__inputs-item">
+                    <p class="badge badge-warning">Вес (кг)</p>
+                    <input type="number" step="0.01" name="date" class="form-control" id="weight" placeholder="1500" required="required" style="appearance: textfield; margin: 0"/>
+                </div>
+                <div class="form__inputs-item">
+                    <p class="badge badge-warning">Объем (куб²)</p>
+                    <input type="number" name="address" id="vol" class="form-control" placeholder="2" required="required"/>
+                </div>
+                <div class="form__inputs-item">
+                    <p class="badge badge-warning">Город прибытия</p>
+                    <select type="text" name="date" class="form-control"  placeholder="1500" required="required" id="town">
+                        <option value="1">Москва</option>
+                        <option value="2">Волгоград</option>
+                        <option value="3">Ростов-на-Дону</option>
+                        <option value="4">Санкт-Петербург</option>
+                        <option value="5">Самара</option>
+                        <option value="6">Воронеж</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form__category">
+                <div class="form__category-item" style="visibility: visible;">
+                    <input type="checkbox" id="load" name="mess" class="custom-control-input"/>
+                    <label class="custom-control-label" for="load">Нужна погрузка</label>
+                </div>
+
+                <div class="form__category-item" style="visibility: visible;">
+                    <input type="checkbox" id="del" name="mess" class="custom-control-input"/>
+                    <label class="custom-control-label" for="del">Доставка до места</label>
+                </div>
+
+                <div class="form__category-item" style="visibility: visible;">
+                    <input type="checkbox" id="frag" name="mess" class="custom-control-input"/>
+                    <label class="custom-control-label" for="frag">Хрупкий груз</label>
+                </div>
+
+                <div class="form__category-item" style="visibility: visible;">
+                    <input type="checkbox" id="track" name="mess" class="custom-control-input"/>
+                    <label class="custom-control-label" for="track">Track номер</label>
+                </div>
+
+            </div>
+            <div>
+                <div class="range__input">
+                    <label for="range">Расстояние <span class="rasstoyanie">0</span> <span>км</span></label>
+                    <input type="range" class="custom-range" min="50" max="12000" step="50" id="range" value="500"/>
+                </div>
+            </div>
+            <div class="price__out"><span id="out">0.0</span> <span class="rub">₽</span></div>
+            <div>
+                <div class="btn__form">
+                    <input type="button" name="adress" id="btn" class="btn-block btn btn-primary" value="Считать"/>
+                </div>
+            </div>
+        </form>
+    </section>
 </div>
 <script src="calculated.js"></script>
+<script src="./modules/calc.js"></script>
 </body>
 </html>
