@@ -170,6 +170,15 @@
 }
 
 @media screen and (max-width: 700px) {
+  .back-to-top {
+    display: none;
+  }
+  .back-to-top-icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
   .delivery__section {
     h4 {
       font-weight: 800;

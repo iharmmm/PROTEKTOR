@@ -34,6 +34,10 @@ header {
 
   .nav__item {
     padding: 0 20px;
+    &:hover {
+      text-decoration: underline;
+      color: #03C623;
+    }
   }
 }
 
@@ -53,6 +57,34 @@ header {
     width: 24px;
     height: 24px;
   }
+}
+
+.back-to-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  border-radius: 100%;
+  background: #2d85de;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  opacity: 100%;
+  transition: opacity 0.5s;
+}
+
+.back-to-top:hover {
+  opacity: 30%;
+  background: radial-gradient(100% 100% at 50.05% 0%, #5B2C3D 0%, rgba(91, 44, 61, 0) 100%), #1C2B4B;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.back-to-top-icon {
+  width: 2rem;
+  height: 2rem;
+  color: rgba(255, 255, 255, 0);
 }
 
 main {
