@@ -1,0 +1,34 @@
+.about__our {
+  display: flex;
+  .about__our-text {
+    margin-top: 40px;
+    margin-left: 90px;
+  }
+}
+
+.about__our-content > .title {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.about__our-content > .desc {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.counter-items {
+  display: flex;
+  .counter-item:nth-child(2) {
+    padding: 0 40px;
+  }
+}
+
+.counter-num {
+  font-size: 20px;
+  font-weight: 900;
+  color: #2F80ED;
+}
+
+.contact {
+  margin-top: 90px;
+}

@@ -156,9 +156,6 @@ main {
     color: #4A5F8D;
   }
 
-  .about__company-text-desc {
-  }
-
   .bigMap-img {
     width: 740px;
     height: 688px;
@@ -348,82 +345,60 @@ main {
   }
 }
 
-.order__list {
-}
+footer {
+  margin-top: 100px;
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 700px)  {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  .footer-text {
+    margin-left: 70px;
+    @media screen and (max-width: 700px)  {
+      margin-left: 0;
+    }
+    p {
+      max-width: 800px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 133%;
+      color: #7996DC;
+    }
+  }
+  .footer-right {
+    display: flex;
+    flex-direction: column;
 
-.order__link {
-}
+    img {
+      padding: 0;
+      margin: 20px 0;
+      width: 328px;
+      height: 67px;
+    }
 
-.modal-wrap {
-  background: rgba(0, 0, 0, 0.7);
-  height: 100%;
-  left: 0;
-  opacity: 0;
-  overflow: auto;
-  position: fixed;
-  top: 0;
-  visibility: hidden;
-  width: 100%;
-  z-index: 10;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+    a {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 20px;
+      display: flex;
+      color: #575F78;
+      margin-bottom: 22px;
+    }
+  }
+  .footer-img  {
+    display: flex;
+    align-content: center;
+    align-items: center;
+
+    .footer-img-link {
+      padding-left: 90px;
+      padding-right: 20px;
+    }
+  }
 }
-.modal-wrap.visible {
-  opacity: 1;
-  visibility: visible;
-}
-.modal-wrap .modal-container {
-  background: #fff;
-  margin: 1em;
-  max-width: 100%;
-  width: 600px;
-  z-index: 100;
-}
-.modal-wrap .modal-container .modal-header,  .modal-wrap .modal-container .modal-footer {
-  background: #000;
-  float: left;
-  width: 100%;
-}
-.modal-wrap .modal-header .modal-title {
-  color: #fff;
-  float: left;
-  font-size: 2em;
-  margin: 0;
-  padding: 15px 30px;
-}
-.modal-wrap .modal-header .close-modal {
-  background: transparent;
-  border: 0;
-  color: #fff;
-  cursor: pointer;
-  float: right;
-  font-size: 40px;
-  opacity: 0.4;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-.modal-wrap .modal-header .close-modal:hover { opacity: 1; }
-.modal-wrap .modal-content {
-  float: left;
-  margin: 0;
-  padding: 15px 30px;
-  width: 100%;
-}
-.modal-wrap .modal-content p:last-child { margin-bottom: 0; }
-.modal-wrap .modal-footer { text-align: center; }
-.modal-wrap .modal-footer p {
-  color: #ccc;
-  font-size: 12px;
-  font-style: italic;
-  margin: 10px;
-}
-.modal-wrap .modal-footer a { color: #fff; }
