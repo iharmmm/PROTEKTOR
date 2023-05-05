@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROTEKTOR</title>
-<script defer src="index.0b9c006490f2a2d59425.js"></script></head>
+<script defer src="index.465d361cda87e5959620.js"></script></head>
 
 <body>
 <div class="wrapper">
@@ -25,9 +25,6 @@
                 <li class="nav__item">
                     <a href="about.html">О нашей компании</a>
                 </li>
-                <li class="nav__item">
-                    <a href="about.html">Контакты</a>
-                </li>
             </ul>
         </nav>
         <div class="nav__phone">
@@ -36,51 +33,77 @@
     </header>
     <section>
         <h1>О нас</h1>
-        <div>
-            <img src="assets/about__img.svg" alt="About Img">
-        </div>
-        <div>
-            <p class="title">Здесь начинается история</p>
-            <p class="desc">это просто фиктивный текст полиграфической и наборной промышленности. Lorem Ipsum был стандартным фиктивным текстом в отрасли с 1500-х годов, когда неизвестный печатник взял набор текста и скремблировал его, чтобы создать книгу с образцами шрифта. Он пережил не только пять столетий, но и скачок в электронный набор текста, оставаясь практически неизменным.</p>
-            <p class="desc">это просто фиктивный текст полиграфической и наборной промышленности. Lorem Ipsum был стандартным фиктивным текстом в отрасли с 1500-х годов, когда неизвестный печатник взял набор текста и скремблировал его, чтобы создать книгу с образцами шрифта. Он пережил не только пять столетий, но и скачок в электронный набор текста, оставаясь практически неизменным.</p>
-        </div>
-    </section>
-    <section class="counter">
-        <div class="container-heading">
-            Animated Number Counter
-        </div>
-        <div class="counter-items">
-            <div class="counter-item">
-                <div class="counter" id="counter1">10</div>
-                <div class="counter-p">savage</div>
+        <div class="about__our">
+            <div>
+                <img src="assets/about__img.svg" alt="About Img">
             </div>
-            <div class="counter-item">
-                <div class="counter" id="counter2">10</div>
-                <div class="counter-p">emotion</div>
-            </div>
-            <div class="counter-item">
-                <div class="counter" id="counter3">10</div>
-                <div class="counter-p">discern</div>
+            <div class="about__our-text">
+                <div class="about__our-content">
+                    <p class="title">Здесь начинается история</p>
+                    <p class="desc">это просто фиктивный текст полиграфической и наборной промышленности. Lorem Ipsum был
+                        стандартным фиктивным текстом в отрасли с 1500-х годов, когда неизвестный печатник взял набор текста
+                        и скремблировал его, чтобы создать книгу с образцами шрифта. Он пережил не только пять столетий, но
+                        и скачок в электронный набор текста, оставаясь практически неизменным.</p>
+                    <p class="desc">это просто фиктивный текст полиграфической и наборной промышленности. Lorem Ipsum был
+                        стандартным фиктивным текстом в отрасли с 1500-х годов, когда неизвестный печатник взял набор текста
+                        и скремблировал его, чтобы создать книгу с образцами шрифта. Он пережил не только пять столетий, но
+                        и скачок в электронный набор текста, оставаясь практически неизменным.</p>
+                </div>
+                <div class="counter">
+                    <div class="counter-items">
+                        <div class="counter-item">
+                            <div class="counter-num" id="counter1">10</div>
+                            <div class="counter-p">savage</div>
+                        </div>
+                        <div class="counter-item">
+                            <div class="counter-num" id="counter2">10</div>
+                            <div class="counter-p">emotion</div>
+                        </div>
+                        <div class="counter-item">
+                            <div class="counter-num" id="counter3">10</div>
+                            <div class="counter-p">discern</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <section class="contact">
         <div>
-            <div>
-                <img src="assets/about__contact.svg" alt="About Img">
-            </div>
-            <div>
-                <form>
-                    <div>
-                        <input type="text">
-                        <input type="text">
-                    </div>
-                    <div>
-                        <textarea style="resize: none"></textarea>
-                    </div>
-                    <button></button>
-                </form>
-            </div>
+            <form class="order__form" action="assets/php/sendemail.php" method="post">
+                <label class="order__label">
+                    Имя
+                    <input type="text" required class="order__input" placeholder="Иван" name="name">
+                </label>
+                <label class="order__label">
+                    Телефон
+                    <input type="tel" required class="order__input" placeholder="+7 (999) 999 99 99" name="numberPhone">
+                </label>
+                <label class="order__label">
+                    Почта
+                    <input type="email" required class="order__input" placeholder="ivan@email.ru" name="email">
+                </label>
+                <label class="order__label">
+                    Ваш комментарий
+                    <input type="text" required class="order__input" placeholder="Комментарий" name="comment">
+                </label>
+                <label class="order__label-checkbox">
+                    <input type="checkbox" required class="order__input-checkbox">
+                    Даю согласие на обработку персональных данных
+                </label>
+                <button type="submit">Отправить &#x2192;</button>
+                <ul class="order__list">
+                    <li class="order__link">
+                        <a href="#"></a>
+                    </li>
+                    <li class="order__link">
+                        <a href="#"></a>
+                    </li>
+                    <li class="order__link">
+                        <a href="#"></a>
+                    </li>
+                </ul>
+            </form>
         </div>
     </section>
     <section class="contact__links">
@@ -97,6 +120,29 @@
         </ul>
     </section>
 </div>
+<footer>
+    <div class="wrapper footer">
+        <div>
+            <div class="footer-right">
+                <img src="assets/logo.svg" alt="Logo">
+                <a href="#">Калькулятор</a>
+                <a href="#">О нашей компании</a>
+            </div>
+            <div class="footer-img">
+                <img src="assets/pay.svg" alt="Pay">
+                <a class="footer-img-link" href="">
+                    <img src="assets/Whatsapp.svg" alt="Social Link">
+                </a>
+                <a href="">
+                    <img src="assets/Telegram.svg" alt="Social Link">
+                </a>
+            </div>
+        </div>
+        <div class="footer-text">
+            <p>«Bistriki»(«Быстрики») не является подразделением или дочерним предприятием iHerb. «Bistriki»(«Быстрики») - это независимая служба доставки товаров из iHerb. «Bistriki»(«Быстрики») закупает и организовывает доставку товаров из iHerb по поручению и от имени клиента на основании агентского договора (внесение предоплаты со стороны клиента, означает автоматическое подписание договора обеими сторонами). Сайты bistriki.ru и bistriki.com не имеют отношения к компании iHerb, не отражают ее концепцию, не связаны с iherb.com. Все ссылки, фото, изображения, тексты и описания опубликованные на страницах данного сайта, предназначены только для удобства пользователя и объектами прав интеллектуальной собственности iHerb..</p>
+        </div>
+    </div>
+</footer>
 <script src="assets/about.js"></script>
 <script src="assets/counter.js"></script>
 </body>
