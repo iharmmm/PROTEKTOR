@@ -168,24 +168,28 @@
     <section class="order__section">
         <h6 class="order__h6">Хотели бы оформить заказ или задать вопрос?</h6>
         <p class="order__p">Оставьте заявку, мы свяжемся с вами и проконсультируем по любым вопросам 🥰</p>
-        <form class="order__form">
+        <form class="order__form" action="assets/php/sendemail.php" method="post">
             <label class="order__label">
                 Имя
-                <input type="text" required class="order__input" placeholder="Иван">
+                <input type="text" required class="order__input" placeholder="Иван" name="name">
             </label>
             <label class="order__label">
                 Телефон
-                <input type="tel" required class="order__input" placeholder="+7 (999) 999 99 99">
+                <input type="tel" required class="order__input" placeholder="+7 (999) 999 99 99" name="numberPhone">
+            </label>
+            <label class="order__label">
+                Почта
+                <input type="email" required class="order__input" placeholder="ivan@email.ru" name="email">
             </label>
             <label class="order__label">
                 Ваш комментарий
-                <input type="text" required class="order__input" placeholder="Комментарий">
+                <input type="text" required class="order__input" placeholder="Комментарий" name="comment">
             </label>
             <label class="order__label-checkbox">
                 <input type="checkbox" required class="order__input-checkbox">
                 Даю согласие на обработку персональных данных
             </label>
-            <button>Отправить &#x2192;</button>
+            <button type="submit">Отправить &#x2192;</button>
             <ul class="order__list">
                 <li class="order__link">
                     <a href="#"></a>
@@ -205,6 +209,29 @@
         </svg>
     </button>
 </div>
+<footer>
+    <div class="wrapper footer">
+        <div>
+            <div class="footer-right">
+                <img src="img/logo.svg" alt="Logo">
+                <a href="#">Калькулятор</a>
+                <a href="#">О нашей компании</a>
+            </div>
+            <div class="footer-img">
+                <img src="img/pay.svg" alt="Pay">
+                <a class="footer-img-link" href="">
+                    <img src="img/Whatsapp.svg" alt="Social Link">
+                </a>
+                <a href="">
+                    <img src="img/Telegram.svg" alt="Social Link">
+                </a>
+            </div>
+        </div>
+        <div class="footer-text">
+            <p>«Bistriki»(«Быстрики») не является подразделением или дочерним предприятием iHerb. «Bistriki»(«Быстрики») - это независимая служба доставки товаров из iHerb. «Bistriki»(«Быстрики») закупает и организовывает доставку товаров из iHerb по поручению и от имени клиента на основании агентского договора (внесение предоплаты со стороны клиента, означает автоматическое подписание договора обеими сторонами). Сайты bistriki.ru и bistriki.com не имеют отношения к компании iHerb, не отражают ее концепцию, не связаны с iherb.com. Все ссылки, фото, изображения, тексты и описания опубликованные на страницах данного сайта, предназначены только для удобства пользователя и объектами прав интеллектуальной собственности iHerb..</p>
+        </div>
+    </div>
+</footer>
 
 </body>
 <script src="modules/calc.js"></script>
