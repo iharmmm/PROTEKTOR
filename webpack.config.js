@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
@@ -46,12 +47,21 @@ module.exports = {
       chunks: ['index'],
       inject: true,
     }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'src/sendemail.php', to: 'assets/php/sendemail.php' },
+      ],
+    }),
   ],
   module: {
     rules: [
       {
         test: /\.html$/i,
         loader: 'html-loader',
+      },
+      {
+        test: /\.php$/i,
+        loader: 'php-loader',
       },
       {
         test: /\.(c|sa|sc)ss$/i,
@@ -88,8 +98,8 @@ module.exports = {
       {
         test: /\.(jpe?g|png|webp|gif|svg)$/i,
         use: devMode
-          ? []
-          : [
+            ? []
+            : [
               {
                 loader: 'image-webpack-loader',
                 options: {
