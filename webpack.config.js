@@ -50,6 +50,14 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: 'src/sendemail.php', to: 'assets/php/sendemail.php' },
+        { from: 'src/connect.php', to: 'assets/php/connect.php' },
+        { from: 'src/createdb.php', to: 'assets/php/createdb.php' },
+        { from: 'src/addToDataBase.php', to: 'assets/php/addToDataBase.php' },
+        { from: 'src/auth.php', to: 'assets/php/auth.php' },
+        { from: 'src/dashboard.php', to: 'dashboard.php' },
+        { from: 'src/login.php', to: 'login.php' },
+        { from: 'src/style.css', to: 'assets/css/style.css' },
+        { from: 'src/feedback.php', to: 'feedback.php' },
       ],
     }),
   ],
