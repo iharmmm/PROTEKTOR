@@ -1,4 +1,12 @@
+<?php
+session_start();
 
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit();
+}
+require_once 'assets/php/connect.php';
+?>
 <!DOCTYPE html>
 <html lang="ru">
 
