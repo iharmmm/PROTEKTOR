@@ -13,12 +13,9 @@ vol = document.querySelector('#vol');
 kg = 5.5;
 kub = 3500;
 km = 2;
-
-// range slider
 range.onchange = function () {
   document.querySelector('.rasstoyanie').innerHTML = range.value;
 };
-// Basic function
 btn.onclick = function () {
   if (weight.value !== '' && vol.value !== '') {
     if (load.checked) {
